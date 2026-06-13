@@ -403,3 +403,62 @@ footer { background: var(--navy-deep); color: var(--on-navy-muted); padding: 70p
   .foot-top { grid-template-columns: 1fr; gap: 30px; }
   .hero-meta { gap: 20px 26px; }
 }
+
+/* =========================================================
+   SKY-BLUE THEME (experiment) — makes the Fintley light blue
+   the dominant section color instead of navy. Fully self-
+   contained override; DELETE this whole block to revert.
+   Product panels (.project-visual) and the hero phone stay
+   dark on purpose so the sky-blue visuals keep their contrast.
+   ========================================================= */
+.on-navy {
+  background: radial-gradient(1200px 600px at 78% -10%, var(--sky-bright), var(--sky) 62%);
+  color: #0B2540;
+}
+.on-navy h1, .on-navy h2, .on-navy h3, .on-navy h4 { color: #06243C; }
+.on-navy .lead { color: #0B2540; }
+.on-navy .section-head p { color: #0B2540; }
+.on-navy .muted { color: #0B2540; }
+.on-navy .eyebrow { color: #06243C; }
+.on-navy .eyebrow::before { background: linear-gradient(90deg, #06243C, transparent); }
+.on-navy .wordmark { color: #06243C; }
+
+/* Buttons: navy now reads as the accent on the sky sections */
+.on-navy .btn-primary { background: #0B2540; color: #EAF2F9; box-shadow: 0 14px 30px -12px rgba(8,28,48,0.5); }
+.on-navy .btn-primary:hover { background: #06243C; box-shadow: 0 20px 40px -14px rgba(8,28,48,0.6); }
+.on-navy .btn-ghost { color: #06243C; border-color: rgba(11,37,64,0.4); }
+.on-navy .btn-ghost:hover { border-color: #0B2540; color: #0B2540; }
+.on-navy .textlink { color: #06243C; }
+.on-navy .textlink:hover { color: #0B2540; }
+.on-navy .btn:focus-visible, .on-navy .textlink:focus-visible { outline-color: #06243C; }
+
+/* Hero stat figures */
+.hero-meta .k { color: #06243C; }
+.hero-meta .l { color: #0B2540; }
+
+/* Trust strip */
+.strip { border-top-color: rgba(11,37,64,0.15); border-bottom-color: rgba(11,37,64,0.15); }
+.strip .item { color: #0B2540; }
+.strip .item svg { color: #06243C; }
+
+/* Values band */
+.value { border-top-color: rgba(11,37,64,0.18); }
+.value p { color: #0B2540; }
+.value .num { color: #06243C; }
+
+/* CTA band */
+.cta-band p { color: #0B2540; }
+
+/* Footer */
+footer { background: var(--sky); color: #0B2540; }
+.foot-top { border-bottom-color: rgba(11,37,64,0.18); }
+.foot-brand p { color: #0B2540; }
+.foot-col h4 { color: #06243C; }
+.foot-col a { color: #0B2540; }
+.foot-col a:hover { color: #06243C; }
+.footer-location { color: #0B2540; }
+.foot-bottom { color: #0B2540; }
+.foot-bottom a { color: #0B2540; }
+.foot-bottom a:hover { color: #06243C; }
+.foot-bottom .priv svg { color: #06243C; }
+footer .wordmark { color: #06243C; }
