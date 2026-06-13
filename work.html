@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Work — Fintlock</title>
   <meta name="description" content="Three products in development at Fintlock: Fintley, a real-estate scoring app; Soloria, a solo tabletop adventure; and a construction permit tool.">
+  <link rel="canonical" href="https://fintlock.com/work.html">
   <meta property="og:title" content="Work — Fintlock">
   <meta property="og:description" content="Three products in development, each aimed at a different kind of complicated.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fintlock.com/work.html">
+  <meta property="og:site_name" content="Fintlock">
+  <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#081C30">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <noscript><style>.reveal{opacity:1;transform:none;transition:none;}</style></noscript>
 </head>
 <body>
 
@@ -46,13 +52,24 @@
 
     <section class="section-pad">
       <div class="wrap">
+        <h2 class="visually-hidden">Projects in development</h2>
 
         <div class="project reveal">
           <div class="project-visual">
-            <div class="viz-score">
-              <div class="big">87</div>
-              <div class="cap">Property score · 1&ndash;100</div>
-              <div class="row"><span>Price</span><span>Cash flow</span><span>Momentum</span><span>Location</span></div>
+            <div class="viz-fintley">
+              <svg viewBox="40 15 160 150" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="fintleyBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7CC4F0"/><stop offset="1" stop-color="#4FA8E0"/></linearGradient></defs>
+                <path d="M120 54 L120 42" stroke="#2E7FB8" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+                <circle cx="120" cy="37" r="6.5" fill="#FFCB05"/>
+                <path d="M86 96 L120 64 L154 96 L154 130 L86 130 Z" fill="url(#fintleyBody)" stroke="url(#fintleyBody)" stroke-width="14" stroke-linejoin="round"/>
+                <path d="M81 93 L93 96 M147 96 L159 93" stroke="#2E7FB8" stroke-width="3" stroke-linecap="round" fill="none"/>
+                <rect x="93" y="86" width="24" height="30" rx="9" fill="#FFFFFF" stroke="#2E7FB8" stroke-width="3"/>
+                <rect x="123" y="86" width="24" height="30" rx="9" fill="#FFFFFF" stroke="#2E7FB8" stroke-width="3"/>
+                <path d="M117 97 Q120 94 123 97" stroke="#2E7FB8" stroke-width="3" stroke-linecap="round" fill="none"/>
+                <circle cx="105" cy="102" r="5.5" fill="#0B2540"/><circle cx="102.5" cy="99" r="2" fill="#FFFFFF"/>
+                <circle cx="135" cy="102" r="5.5" fill="#0B2540"/><circle cx="132.5" cy="99" r="2" fill="#FFFFFF"/>
+                <path d="M107 123 Q120 133 133 123" stroke="#0B2540" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+              </svg>
             </div>
           </div>
           <div class="project-body">
@@ -83,7 +100,7 @@
             <p>Tabletop role-playing asks for a group, a rulebook, and someone willing to run the table. Soloria removes all three. The app is the dungeon master, the rulebook, and the table at once, so a complete beginner can start an adventure tonight without scheduling anyone.</p>
             <ul class="feats">
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Built for players with zero experience</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>No group, no prep, no rulebook to memorise</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>No group, no prep, no rulebook to memorize</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>A full adventure in a single sitting</li>
             </ul>
             <span class="status"><span class="dot"></span> In development</span>
@@ -154,7 +171,7 @@
           <h4>Get in touch</h4>
           <a href="mailto:hello@fintlock.com">hello@fintlock.com</a>
           <a href="contact.html">Start a conversation</a>
-          <span style="display:block;color:var(--on-navy-faint);padding:6px 0;font-size:0.96rem">Florida, USA</span>
+          <span class="footer-location">Florida, USA</span>
         </div>
       </div>
       <div class="foot-bottom">

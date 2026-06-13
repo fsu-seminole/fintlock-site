@@ -38,14 +38,28 @@
   const year = document.querySelector("[data-year]");
   if (year) { year.textContent = String(new Date().getFullYear()); }
 
-  // Contact form (client-side only; no backend wired up)
+  // Contact form: no backend, so compose a pre-filled email in the
+  // visitor's own mail client. The form-msg gives a fallback if nothing opens.
   const form = document.querySelector("#contact-form");
   if (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+      if (typeof form.reportValidity === "function" && !form.reportValidity()) {
+        return;
+      }
+      const data = new FormData(form);
+      const name = (data.get("name") || "").toString().trim();
+      const email = (data.get("email") || "").toString().trim();
+      const topic = (data.get("topic") || "").toString().trim();
+      const message = (data.get("message") || "").toString().trim();
+      const subject = "Website inquiry" + (topic ? " — " + topic : "");
+      const body = "Name: " + name + "\nEmail: " + email + "\n\n" + message;
+      const mailto = "mailto:hello@fintlock.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
       const msg = form.querySelector(".form-msg");
       if (msg) { msg.classList.add("show"); }
-      form.reset();
+      window.location.href = mailto;
     });
   }
 })();
