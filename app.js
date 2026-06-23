@@ -1,4 +1,4 @@
-// Fintlock site behaviour: navigation, scroll reveal, contact form.
+// Fintlock site behaviour: mobile navigation, footer year, contact form.
 
 (function () {
   "use strict";
@@ -16,50 +16,42 @@
         toggle.setAttribute("aria-expanded", "false");
       });
     });
-  }
-
-  // Reveal sections on scroll
-  const revealables = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && revealables.length) {
-    const io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-    revealables.forEach(function (el) { io.observe(el); });
-  } else {
-    revealables.forEach(function (el) { el.classList.add("in"); });
+    // Close the menu with Escape for keyboard users
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && document.body.classList.contains("nav-open")) {
+        document.body.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.focus();
+      }
+    });
   }
 
   // Current year in footer
   const year = document.querySelector("[data-year]");
   if (year) { year.textContent = String(new Date().getFullYear()); }
 
-  // Contact form: no backend, so compose a pre-filled email in the
-  // visitor's own mail client. The form-msg gives a fallback if nothing opens.
+  // Contact form — no backend. Compose a pre-filled email to the studio so the
+  // submission actually goes somewhere, then confirm honestly.
   const form = document.querySelector("#contact-form");
   if (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
-      if (typeof form.reportValidity === "function" && !form.reportValidity()) {
-        return;
-      }
-      const data = new FormData(form);
-      const name = (data.get("name") || "").toString().trim();
-      const email = (data.get("email") || "").toString().trim();
-      const topic = (data.get("topic") || "").toString().trim();
-      const message = (data.get("message") || "").toString().trim();
-      const subject = "Website inquiry" + (topic ? " — " + topic : "");
-      const body = "Name: " + name + "\nEmail: " + email + "\n\n" + message;
-      const mailto = "mailto:hello@fintlock.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
+      const value = function (name) {
+        const field = form.elements[name];
+        return field ? field.value.trim() : "";
+      };
+      const topic = value("topic");
+      const subject = "Fintlock enquiry" + (topic ? " — " + topic : "");
+      const body =
+        "Name: " + value("name") + "\n" +
+        "Email: " + value("email") + "\n" +
+        "Topic: " + topic + "\n\n" +
+        value("message");
       const msg = form.querySelector(".form-msg");
       if (msg) { msg.classList.add("show"); }
-      window.location.href = mailto;
+      window.location.href =
+        "mailto:hello@fintlock.com?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
     });
   }
 })();
