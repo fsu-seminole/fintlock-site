@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="406" height="120" viewBox="0 0 406 120" role="img" aria-label="CollectCalm">
+  <title>CollectCalm</title>
+  <g transform="translate(10,24) scale(1.3846) translate(-32,-28)">
+    <path d="M40 52a20 20 0 0 1 40 0z" fill="#2E9E9B"/>
+    <rect x="36" y="58" width="48" height="7" rx="3.5" fill="#1B3A5C"/>
+    <rect x="44" y="70" width="32" height="7" rx="3.5" fill="#8FC3EA"/>
+  </g>
+  <text x="104" y="79" textLength="168" lengthAdjust="spacingAndGlyphs" font-family="'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="54" font-weight="600" letter-spacing="-0.5" fill="#1B3A5C">Collect</text>
+  <text x="272" y="79" textLength="124" lengthAdjust="spacingAndGlyphs" font-family="'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="54" font-weight="600" letter-spacing="-0.5" fill="#2E9E9B">Calm</text>
+</svg>
