@@ -614,58 +614,11 @@ svg {
   transform: translate(3px, -3px);
 }
 
-/* Client section */
-
-.client-section {
-  padding-block: 112px;
-  border-top: 1px solid var(--line);
-  background: var(--paper-deep);
-}
-
-.client-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.82fr);
-  gap: clamp(70px, 9vw, 150px);
-  align-items: center;
-}
-
-.client-grid .overline {
-  margin-bottom: 22px;
-}
-
-.client-copy > p {
-  font-size: 1.08rem;
-  line-height: 1.72;
-}
-
-.plain-service-list {
-  margin: 36px 0 30px;
-  list-style: none;
-  border-top: 1px solid var(--ink);
-}
-
-.plain-service-list li {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(170px, 0.8fr);
-  gap: 24px;
-  padding: 17px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.plain-service-list span {
-  color: var(--ink);
-  font-weight: 650;
-}
-
-.plain-service-list small {
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
 /* Contact prompt */
 
 .contact-prompt {
   padding-block: 112px;
+  border-top: 1px solid var(--line);
   background: var(--paper-light);
 }
 
@@ -678,6 +631,14 @@ svg {
 
 .contact-prompt h2 {
   font-size: clamp(3rem, 4.5vw, 4.6rem);
+}
+
+.contact-prompt-sub {
+  max-width: 46ch;
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
 }
 
 .contact-prompt-grid > div:last-child {
@@ -702,10 +663,6 @@ svg {
 
 .email-link:hover {
   border-color: var(--gold);
-}
-
-.compact-contact-prompt {
-  border-top: 1px solid var(--line);
 }
 
 /* Footer */
@@ -1312,7 +1269,6 @@ svg {
   .feature-heading,
   .product-feature-head,
   .product-case-grid,
-  .client-grid,
   .strength-grid,
   .fit-grid,
   .engagement-grid {
@@ -1398,7 +1354,6 @@ svg {
   .page-intro-grid,
   .feature-heading,
   .section-intro,
-  .client-grid,
   .contact-prompt-grid,
   .product-feature-head,
   .product-case-grid,
@@ -1594,7 +1549,6 @@ svg {
   }
 
   .section-pad,
-  .client-section,
   .contact-prompt,
   .strength-section,
   .engagement-section,
@@ -1611,7 +1565,6 @@ svg {
   .feature-heading .overline,
   .product-feature-head .overline,
   .section-intro .overline,
-  .client-grid .overline,
   .fit-grid .overline,
   .engagement-grid .overline {
     margin-bottom: 18px;
@@ -1655,7 +1608,6 @@ svg {
   .feature-heading,
   .product-feature-head,
   .product-case-grid,
-  .client-grid,
   .strength-grid,
   .fit-grid,
   .engagement-grid {
