@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#f2efe7">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=23">
+  <link rel="stylesheet" href="styles.css?v=24">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -23,7 +23,8 @@
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="Fintlock home"><img src="assets/brand/fintlock-logo-navy.svg" alt="Fintlock" width="121" height="32"></a>
       <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
-        <a href="work.html">Products</a>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
         <a href="contact.html" aria-current="page">Contact</a>
       </nav>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
@@ -51,20 +52,16 @@
 
           <div class="contact-note">
             <h2>Good to know:</h2>
-            <ul>
-              <li>App packages start at $500</li>
-              <li>Fixed quote before work starts</li>
-              <li>Response within a day</li>
-            </ul>
+            <ul><li>Clear scope before work starts</li><li>Progress you can review</li><li>Response within a day</li></ul>
           </div>
 
           <div class="contact-location">
             <span>Based in</span>
-            <strong>Florida, USA</strong>
+            <strong>Tampa, Florida</strong>
           </div>
         </aside>
 
-        <form class="project-form" data-contact-form action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST">
+        <form class="project-form" data-contact-form>
           <div class="form-heading">
             <p class="overline">Project note</p>
             <h2>Send a message</h2>
@@ -79,32 +76,18 @@
               <label for="email">Email</label>
               <input id="email" name="email" type="email" autocomplete="email" required>
             </div>
-            <div class="field">
-              <label for="company">Company <span>optional</span></label>
-              <input id="company" name="company" autocomplete="organization">
-            </div>
-            <div class="field">
-              <label for="topic">Project type</label>
-              <select id="topic" name="topic">
-                <option>New software product</option>
-                <option>Improve an existing product</option>
-                <option>iPhone app</option>
-                <option>Desktop or web tool</option>
-                <option>Fintlock product question</option>
-                <option>Something else</option>
-              </select>
+            <div class="field field-full">
+              <label for="message">What needs to work better?</label>
+              <textarea id="message" name="message" rows="9" required placeholder="Tell us what happens today and what you would like the software to improve."></textarea>
             </div>
             <div class="field field-full">
-              <label for="message">What can we help you build?</label>
-              <textarea id="message" name="message" rows="9" required></textarea>
+              <label for="company">Company or existing product link <span>optional</span></label>
+              <input id="company" name="company" autocomplete="organization">
             </div>
           </div>
 
-          <input type="hidden" name="_subject" value="Fintlock website contact">
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true">
-
           <div class="form-footer">
-            <button class="form-button" type="submit">Send message</button>
+            <button class="form-button" type="submit">Continue in email</button>
             <p>Prefer email? Write to contact@fintlock.com.</p>
           </div>
           <p class="form-status" role="status" aria-live="polite"></p>
@@ -115,13 +98,13 @@
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div><a class="footer-brand" href="index.html" aria-label="Fintlock home"><img src="assets/brand/fintlock-logo-white.svg" alt="Fintlock" width="113" height="30"></a><p>Software company in Tampa, FL.</p></div>
-      <nav class="footer-nav" aria-label="Footer navigation"><a href="work.html">Products</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
+      <div><a class="footer-brand" href="index.html" aria-label="Fintlock home"><img src="assets/brand/fintlock-logo-white.svg" alt="Fintlock" width="113" height="30"></a><p>Custom software built in Tampa, FL.</p></div>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="work.html">Work</a><a href="services.html">Services</a><a href="contact.html" aria-current="page">Contact</a><a href="privacy.html">Privacy</a></nav>
       <div class="footer-meta"><a href="mailto:contact@fintlock.com">contact@fintlock.com</a><span>© <span data-year>2026</span> Fintlock LLC</span></div>
 
     </div>
   </footer>
 
-  <script src="app.js?v=22" defer></script>
+  <script src="app.js?v=24" defer></script>
 </body>
 </html>
