@@ -51,25 +51,29 @@
         return;
       }
 
-      const status = form.querySelector(".form-status");
-      const button = form.querySelector("button[type=submit]");
-      button.disabled = true;
-      button.textContent = "Sending...";
-
-      fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { "Accept": "application/json" }
-      }).then(function (response) {
-        if (!response.ok) { throw new Error("send failed"); }
-        form.reset();
-        if (status) { status.textContent = "Thanks. We will reply within a day."; }
-      }).catch(function () {
-        if (status) { status.textContent = "Something went wrong. Email us at contact@fintlock.com."; }
-      }).finally(function () {
-        button.disabled = false;
-        button.textContent = "Send message";
+      const data = new FormData(form);
+      const name = String(data.get("name") || "").trim();
+      const email = String(data.get("email") || "").trim();
+      const company = String(data.get("company") || "").trim();
+      const message = String(data.get("message") || "").trim();
+      const subject = "Project inquiry from " + name;
+      const bodyLines = [
+        "Name: " + name,
+        "Email: " + email,
+        company ? "Company or link: " + company : "",
+        "",
+        "What needs to work better?",
+        message
+      ].filter(function (line, index) {
+        return line || index === 3;
       });
+      const mailto = "mailto:contact@fintlock.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(bodyLines.join("\n"));
+      const status = form.querySelector(".form-status");
+
+      if (status) {
+        status.textContent = "Your email application should open with the project note ready to send.";
+      }
+      window.location.href = mailto;
     });
   }
 }());
