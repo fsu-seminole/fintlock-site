@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="134" height="186" viewBox="0 0 134 186">
+  <title>Fintlock mark</title>
+  <g transform="translate(-399.3,174.5)">
+  <path d="M 440.3 -85 L 440.3 -130 A 26 26 0 0 1 492.3 -130 L 492.3 -85" fill="none" stroke="#fec005" stroke-width="21"></path>
+  <path d="M 407.3 -55.8 a 59 59 0 1 0 118 0 a 59 59 0 1 0 -118 0 Z M 440.3 -55.8 a 26 26 0 1 0 52 0 a 26 26 0 1 0 -52 0 Z" fill="#fec005" fill-rule="evenodd"></path>
+  </g>
+</svg>

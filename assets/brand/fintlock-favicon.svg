@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Fintlock favicon</title>
+  <rect width="64" height="64" rx="14" fill="#031532"></rect>
+  <g transform="translate(32,32) scale(0.26) translate(-466.3,81.65)">
+  <path d="M 440.3 -85 L 440.3 -130 A 26 26 0 0 1 492.3 -130 L 492.3 -85" fill="none" stroke="#fec005" stroke-width="21"></path>
+  <path d="M 407.3 -55.8 a 59 59 0 1 0 118 0 a 59 59 0 1 0 -118 0 Z M 440.3 -55.8 a 26 26 0 1 0 52 0 a 26 26 0 1 0 -52 0 Z" fill="#fec005" fill-rule="evenodd"></path>
+  </g>
+</svg>
