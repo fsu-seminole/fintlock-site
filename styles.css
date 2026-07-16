@@ -1097,23 +1097,59 @@ svg {
   margin-top: 70px;
   overflow: hidden;
   border-top: 1px solid var(--line-dark);
-  background: var(--paper-light);
+  background:
+    radial-gradient(circle at 29% 46%, rgba(166, 188, 139, 0.14), transparent 31%),
+    linear-gradient(118deg, var(--paper-light) 0%, #10251f 100%);
 }
 
 .plants-feature-visual {
   position: relative;
   display: grid;
-  min-height: 590px;
+  min-height: 620px;
   place-items: center;
-  padding-block: 70px;
+  padding-block: 68px 104px;
 }
 
-.plants-feature-lockup {
+.plants-feature-brand {
   position: relative;
   z-index: 1;
-  width: min(720px, 70vw);
+  display: grid;
+  grid-template-columns: minmax(220px, 310px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(42px, 7vw, 96px);
+  width: min(940px, calc(100% - 68px));
+}
+
+.plants-feature-mark {
+  width: 100%;
   height: auto;
-  filter: drop-shadow(0 24px 50px rgba(0, 0, 0, 0.26));
+  filter: drop-shadow(0 28px 46px rgba(0, 0, 0, 0.28));
+}
+
+.plants-feature-brand-copy {
+  min-width: 0;
+}
+
+.plants-feature-name {
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(4.2rem, 7.2vw, 7rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.82;
+}
+
+.plants-feature-name span {
+  display: block;
+}
+
+.plants-feature-category {
+  margin-top: 30px;
+  color: #afbea6;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .plants-feature-steps {
@@ -1831,11 +1867,17 @@ svg {
   }
 
   .plants-feature-visual {
-    min-height: 500px;
+    min-height: 540px;
   }
 
-  .plants-feature-lockup {
-    width: min(640px, 82vw);
+  .plants-feature-brand {
+    grid-template-columns: minmax(190px, 250px) minmax(0, 1fr);
+    gap: clamp(30px, 6vw, 58px);
+    width: min(760px, calc(100% - 48px));
+  }
+
+  .plants-feature-name {
+    font-size: clamp(3.6rem, 8.6vw, 5.4rem);
   }
 
   .fintley-secondary-art {
@@ -2073,12 +2115,29 @@ svg {
   }
 
   .plants-feature-visual {
-    min-height: 390px;
-    padding-block: 52px 96px;
+    min-height: 590px;
+    padding-block: 52px 112px;
   }
 
-  .plants-feature-lockup {
-    width: min(460px, 92vw);
+  .plants-feature-brand {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 26px;
+    width: min(390px, calc(100% - 40px));
+    text-align: center;
+  }
+
+  .plants-feature-mark {
+    width: min(210px, 55vw);
+  }
+
+  .plants-feature-name {
+    font-size: clamp(3.5rem, 17vw, 4.8rem);
+  }
+
+  .plants-feature-category {
+    margin-top: 22px;
+    font-size: 0.61rem;
   }
 
   .plants-feature-steps {
