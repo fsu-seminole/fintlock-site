@@ -1,20 +1,23 @@
 :root {
-  --paper: #f2efe7;
-  --paper-deep: #e5e0d6;
-  --paper-light: #faf8f3;
-  --ink: #031532;
-  --ink-soft: #253142;
-  --muted: #69707a;
-  --line: #c9c4b9;
-  --line-dark: rgba(255, 255, 255, 0.18);
+  --paper: #071426;
+  --paper-deep: #08182b;
+  --paper-light: #0c1c31;
+  --ink: #f2efe7;
+  --ink-soft: #d8dee7;
+  --muted: #a7b0bc;
+  --line: rgba(242, 239, 231, 0.14);
+  --line-strong: rgba(242, 239, 231, 0.28);
+  --line-dark: rgba(242, 239, 231, 0.16);
   --gold: #fec005;
-  --blue: #031532;
-  --white: #ffffff;
+  --blue: #0c1c31;
+  --navy: #031532;
+  --input: #0e2037;
+  --white: #f2efe7;
   --wrap: 1320px;
   --display: "Iowan Old Style", "Palatino Linotype", Palatino, Baskerville, Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 *,
@@ -114,11 +117,11 @@ svg {
 
 ::selection {
   background: var(--gold);
-  color: var(--ink);
+  color: var(--navy);
 }
 
 :focus-visible {
-  outline: 2px solid var(--ink);
+  outline: 2px solid var(--gold);
   outline-offset: 4px;
 }
 
@@ -158,7 +161,7 @@ svg {
 
 .underlined-link:hover {
   border-color: var(--gold);
-  color: #765800;
+  color: var(--gold);
 }
 
 .underlined-link-light {
@@ -175,7 +178,7 @@ svg {
   left: 12px;
   z-index: 1000;
   padding: 10px 14px;
-  background: var(--ink);
+  background: var(--navy);
   color: var(--white);
   font-weight: 700;
   transform: translateY(-150%);
@@ -193,7 +196,7 @@ svg {
   top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--line);
-  background: rgba(242, 239, 231, 0.97);
+  background: rgba(7, 20, 38, 0.96);
 }
 
 .header-inner {
@@ -304,7 +307,7 @@ svg {
 
 .masthead-copy {
   padding-top: 24px;
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
   font-size: 1.08rem;
   line-height: 1.7;
 }
@@ -320,8 +323,8 @@ svg {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 96px;
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .product-index a {
@@ -378,7 +381,7 @@ svg {
 .featured-product {
   margin-top: 110px;
   padding-top: 104px;
-  background: var(--ink);
+  background: var(--navy);
   color: rgba(255, 255, 255, 0.76);
 }
 
@@ -508,13 +511,13 @@ svg {
   display: block;
   margin-bottom: 34px;
   padding-bottom: 16px;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 /* Product ledger */
 
 .ledger {
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
 }
 
 .ledger-row {
@@ -669,7 +672,7 @@ svg {
 
 .site-footer {
   padding-block: 64px 48px;
-  background: var(--ink);
+  background: var(--navy);
   color: rgba(255, 255, 255, 0.62);
 }
 
@@ -740,7 +743,7 @@ svg {
 
 .page-intro-grid > p {
   padding-top: 24px;
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
   font-size: 1.05rem;
   line-height: 1.72;
 }
@@ -749,8 +752,8 @@ svg {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 84px;
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .page-product-index a {
@@ -795,7 +798,7 @@ svg {
 .product-feature-case {
   scroll-margin-top: 78px;
   padding: 104px 0 96px;
-  background: var(--ink);
+  background: var(--navy);
   color: rgba(255, 255, 255, 0.74);
 }
 
@@ -915,7 +918,7 @@ svg {
 
 .case-specs {
   margin-top: 32px;
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
 }
 
 .case-specs div {
@@ -985,15 +988,16 @@ svg {
   flex-direction: column;
   gap: 28px;
   padding: 70px;
-  background: #e8e3d8;
+  background: var(--paper-light);
 }
 
 .plants-art img {
   width: min(500px, 70%);
+  filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.24));
 }
 
 .plants-art figcaption {
-  color: #5e594f;
+  color: var(--muted);
   font-family: var(--display);
   font-size: 1.4rem;
   font-style: italic;
@@ -1019,8 +1023,8 @@ svg {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 96px;
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .confidence-strip div {
@@ -1067,6 +1071,51 @@ svg {
   width: 100%;
 }
 
+.plants-feature-stage {
+  position: relative;
+  margin-top: 70px;
+  overflow: hidden;
+  border-top: 1px solid var(--line-dark);
+  background: var(--paper-light);
+}
+
+.plants-feature-visual {
+  position: relative;
+  display: grid;
+  min-height: 590px;
+  place-items: center;
+  padding-block: 70px;
+}
+
+.plants-feature-lockup {
+  position: relative;
+  z-index: 1;
+  width: min(720px, 70vw);
+  height: auto;
+  filter: drop-shadow(0 24px 50px rgba(0, 0, 0, 0.26));
+}
+
+.plants-feature-steps {
+  position: absolute;
+  bottom: 42px;
+  left: 34px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.plants-feature-steps i {
+  width: 48px;
+  height: 1px;
+  background: var(--line-strong);
+}
+
 .selected-case {
   padding-block: 112px;
   background: var(--paper-light);
@@ -1089,7 +1138,7 @@ svg {
 .selected-case-copy {
   align-self: end;
   padding-top: 24px;
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
   font-size: 1.04rem;
   line-height: 1.72;
 }
@@ -1101,6 +1150,39 @@ svg {
 
 .selected-case-art {
   margin-top: 16px;
+}
+
+.fintley-secondary-art {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 42px);
+  min-height: 0;
+  align-items: end;
+  padding: 48px 8vw 0;
+  border-color: var(--line);
+  background: var(--navy);
+}
+
+.fintley-secondary-art figure {
+  min-width: 0;
+}
+
+.fintley-secondary-art figcaption {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fintley-secondary-art img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line-dark);
+  border-bottom: 0;
+  border-radius: 22px 22px 0 0;
+  box-shadow: 0 -14px 38px rgba(0, 0, 0, 0.2);
 }
 
 .service-preview {
@@ -1124,7 +1206,7 @@ svg {
 }
 
 .service-rows {
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
 }
 
 .service-rows article {
@@ -1149,7 +1231,7 @@ svg {
 
 .process-section {
   padding-block: 112px;
-  background: var(--ink);
+  background: var(--navy);
   color: rgba(255, 255, 255, 0.66);
 }
 
@@ -1206,7 +1288,7 @@ svg {
 }
 
 .service-detail-rows {
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
 }
 
 .service-detail-rows article {
@@ -1248,7 +1330,7 @@ svg {
 
 .builder-section {
   padding-block: 112px;
-  background: var(--ink);
+  background: var(--navy);
   color: rgba(255, 255, 255, 0.64);
 }
 
@@ -1288,7 +1370,7 @@ svg {
 }
 
 .process-section-light .process-list {
-  border-top-color: var(--ink);
+  border-top-color: var(--line-strong);
 }
 
 .process-section-light .process-list li {
@@ -1314,7 +1396,7 @@ svg {
   grid-template-columns: minmax(280px, 0.65fr) minmax(520px, 1.25fr);
   gap: clamp(70px, 10vw, 160px);
   padding-top: 50px;
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
 }
 
 .contact-aside {
@@ -1371,7 +1453,7 @@ svg {
 
 .project-form {
   padding: 42px;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--line-strong);
   background: var(--paper-light);
 }
 
@@ -1436,12 +1518,12 @@ svg {
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
-  border-bottom-color: var(--ink);
-  box-shadow: 0 1px 0 var(--ink);
+  border-bottom-color: var(--gold);
+  box-shadow: 0 1px 0 var(--gold);
 }
 
 .field input::placeholder {
-  color: #91949a;
+  color: var(--muted);
 }
 
 .form-footer {
@@ -1455,18 +1537,18 @@ svg {
 .form-button {
   min-height: 50px;
   padding: 12px 20px;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--gold);
   border-radius: 0;
-  background: var(--ink);
-  color: var(--white);
+  background: var(--gold);
+  color: var(--navy);
   font-weight: 700;
   cursor: pointer;
   transition: background 150ms ease, color 150ms ease;
 }
 
 .form-button:hover {
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--white);
+  color: var(--navy);
 }
 
 .form-footer p,
@@ -1492,7 +1574,7 @@ svg {
   grid-template-columns: minmax(220px, 0.45fr) minmax(520px, 1fr);
   gap: clamp(70px, 10vw, 160px);
   padding-top: 42px;
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line-strong);
 }
 
 .privacy-aside {
@@ -1612,7 +1694,7 @@ svg {
     display: grid;
     gap: 0;
     padding: 12px 26px 28px;
-    border-bottom: 1px solid var(--ink);
+    border-bottom: 1px solid var(--line-strong);
     background: var(--paper);
     transform: translateY(-120%);
     visibility: hidden;
@@ -1707,6 +1789,18 @@ svg {
     flex: 0 0 220px;
     width: 220px;
     scroll-snap-align: start;
+  }
+
+  .plants-feature-visual {
+    min-height: 500px;
+  }
+
+  .plants-feature-lockup {
+    width: min(640px, 82vw);
+  }
+
+  .fintley-secondary-art {
+    padding-inline: 42px;
   }
 
   .section-intro {
@@ -1933,6 +2027,45 @@ svg {
   .screen-rack figure:nth-child(4) {
     flex-basis: 190px;
     width: 190px;
+  }
+
+  .plants-feature-stage {
+    margin-top: 50px;
+  }
+
+  .plants-feature-visual {
+    min-height: 390px;
+    padding-block: 52px 96px;
+  }
+
+  .plants-feature-lockup {
+    width: min(460px, 92vw);
+  }
+
+  .plants-feature-steps {
+    right: 20px;
+    bottom: 28px;
+    left: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .plants-feature-steps i {
+    width: 22px;
+  }
+
+  .fintley-secondary-art {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 30px 20px 0;
+    scroll-snap-type: x mandatory;
+  }
+
+  .fintley-secondary-art figure {
+    flex: 0 0 190px;
+    scroll-snap-align: start;
   }
 
   .section-intro {
